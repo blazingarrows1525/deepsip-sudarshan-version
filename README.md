@@ -1,4 +1,40 @@
-# deepSIP
+# deepsip-sudarshan-version
+
+This repository contains a local copy of the `deepSIP` package (original author: Benjamin Stahl) with helper scripts to run the example spectra included in the `example/` folder.
+
+What I added
+- `run_example.py` — small script to run `deepSIP` on the first 3 example spectra.
+- `run_full_predictions.py` — runs predictions on `example/spectra.csv` and writes `example/predictions_mc{mcnum}.csv` (pass `mcnum` as first arg, default 50).
+
+Quick start
+
+1. Create and activate a virtual environment (Windows PowerShell):
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+```
+
+2. Install dependencies and the package:
+
+```powershell
+python -m pip install --upgrade pip setuptools wheel
+python -m pip install -r requirements.txt
+python -m pip install .
+```
+
+3. Run the full predictions with mcnum=200:
+
+```powershell
+& .venv\Scripts\python.exe run_full_predictions.py 200
+```
+
+Notes
+- If you used a PAT to push this repo, revoke it in GitHub settings.  
+- The repo includes only the helper scripts and example data from the original `deepSIP` repository.
+
+License
+- The original `deepSIP` code is licensed under GPL-3.0 (see `LICENSE` in the upstream project).# deepSIP
 
 [![Build Status](https://travis-ci.org/benstahl92/deepSIP.svg?branch=master)](https://travis-ci.org/benstahl92/deepSIP) [![Documentation Status](https://readthedocs.org/projects/deepsip/badge/?version=latest)](https://deepsip.readthedocs.io/en/latest/?badge=latest)
  [![codecov](https://codecov.io/gh/benstahl92/deepSIP/branch/master/graph/badge.svg)](https://codecov.io/gh/benstahl92/deepSIP) [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) [![Python 3.6](https://img.shields.io/badge/python-3.6-blue.svg)](https://www.python.org/downloads/release/python-360/)

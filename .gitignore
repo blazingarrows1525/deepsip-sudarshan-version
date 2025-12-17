@@ -1,3 +1,16 @@
+venv/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+env/
+build/
+dist/
+*.egg-info/
+example/predictions_*.csv
+.vscode/
+*.log
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
